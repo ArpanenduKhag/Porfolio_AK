@@ -70,15 +70,14 @@ nav ul li a:hover::after {
 }
 .header-text h1 span {
   font-size: 50px;
-
   color: #ff004f;
 }
 .header-text h3 {
-  font-size: 20px;
+  font-size: 30px;
   margin-top: 5px;
 }
 .header-text h3 span {
-  font-size: 20px;
+  font-size: 32px;
   color: #ff004f;
 }
 
@@ -148,7 +147,7 @@ nav ul li a:hover::after {
 }
 
 /*------------------SERVICES----------------*/
-#services {
+#skills {
   padding: 30px 0;
 }
 /*
@@ -188,6 +187,8 @@ nav ul li a:hover::after {
 }
 */
 section {
+  padding: 30px 0;
+
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 600px;
@@ -517,6 +518,7 @@ nav .fa-solid {
 
 @media only screen and (max-width: 600px) {
   #header {
+    width: 100%;
     background-image: url(images/phone-background.png);
   }
   .header-text {
@@ -526,6 +528,15 @@ nav .fa-solid {
   .header-text h1 {
     font-size: 30px;
   }
+  .header-text h3 {
+    font-size: 16px;
+    margin-top: 2px;
+  }
+  .header-text h3 span {
+    font-size: 18px;
+    color: #ff004f;
+  }
+
   nav .fa-solid {
     display: block;
     font-size: 25px;
@@ -534,8 +545,8 @@ nav .fa-solid {
     background: #ff004f;
     position: fixed;
     top: 0;
-    right: -200px;
-    right: 200px;
+    right: -600px;
+    right: 600px;
     height: 100vh;
     padding-top: 50px;
     z-index: 2;
@@ -553,6 +564,7 @@ nav .fa-solid {
   }
   .sub-title {
     font-size: 40px;
+    margin-bottom: 10px;
   }
   .about-col-1,
   .about-col-2 {
@@ -562,15 +574,31 @@ nav .fa-solid {
     margin-bottom: 30px;
   }
   .about-col-2 {
+    margin-top: 2px;
     font-size: 14px;
   }
   .tab-links {
-    font-size: 16px;
+    font-size: 18px;
     margin-right: 20px;
   }
   .contact-left,
   .contact-right {
     flex-basis: 100%;
+  }
+
+  .container1 {
+    width: 300px;
+    height: 250px;
+    padding: 75px 90px;
+    margin-left: 50px;
+    margin-bottom: 250px;
+  }
+  .heading1 {
+    text-align: center;
+  }
+  .bar {
+    font-size: 23px;
+    margin-left: 20px;
   }
   .copyright {
     font-size: 14px;
