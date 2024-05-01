@@ -14,6 +14,16 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init("ZSL5BFH0zuG8nshk_");
+      })();
+    </script>
   </head>
   <body>
     <div id="header">
@@ -265,7 +275,7 @@
           <div class="work">
             <img src="images/work-2.png" />
             <div class="layer">
-              <h3>Music App</h3>
+              <h3>Doctor AI</h3>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
               <a href="#">
                 <i class="fa-solid fa-up-right-from-square"></i>
@@ -283,7 +293,9 @@
             </div>
           </div>
         </div>
-        <a href="#" class="btn">See more</a>
+        <a href="https://github.com/ArpanenduKhag?tab=repositories" class="btn">
+          See more
+        </a>
       </div>
     </div>
     <!-------------CONTACT----------->
@@ -311,19 +323,16 @@
           </div>
           <div class="contact-right">
             <form>
-              <input type="text" name="Name" placeholder="Your Name" required />
-              <input
-                type="text"
-                name="Email"
-                placeholder="Your Email"
-                required
-              />
+              <input type="text" id="Name" placeholder="Your Name" required />
+              <input type="text" id="Email" placeholder="Your Email" required />
               <textarea
-                name="Message"
+                id="Message"
                 rows="6"
                 placeholder="Your Message"
               ></textarea>
-              <button type="submit" class="btn btn2">Submit</button>
+              <button onclick="sendEmail()" type="submit" class="btn btn2">
+                Submit
+              </button>
             </form>
           </div>
         </div>
@@ -334,8 +343,28 @@
     </div>
 
     <script>
+      function sendEmail() {
+        var params = {
+          from_name: document.getElementById("Name").value,
+          Email: document.getElementById("Email").value,
+          Message: document.getElementById("Message").value,
+        };
+        emailjs
+          .send("service_3lyln2t", "template_gpy4wy5", params)
+          .then(function (res) {
+            alert("SUCCESS! " + res.status);
+          });
+      }
+    </script>
+
+    <script>
       var typed = new Typed("#text", {
-        strings: ["Web Developer...", "Coder...", "Designer..."],
+        strings: [
+          "Web Developer...",
+          "Coder...",
+          "Designer...",
+          "Enthusiast Learner...",
+        ],
         typeSpeed: 100,
         backSpeed: 100,
         backDelay: 1000,
