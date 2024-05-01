@@ -65,12 +65,23 @@ nav ul li a:hover::after {
   font-size: 30px;
 }
 .header-text h1 {
-  font-size: 60px;
+  font-size: 40px;
   margin-top: 20px;
 }
 .header-text h1 span {
+  font-size: 50px;
+
   color: #ff004f;
 }
+.header-text h3 {
+  font-size: 20px;
+  margin-top: 5px;
+}
+.header-text h3 span {
+  font-size: 20px;
+  color: #ff004f;
+}
+
 /*------------------ABOUT----------------*/
 #about {
   padding: 80px 0;
