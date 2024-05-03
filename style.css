@@ -598,14 +598,15 @@ nav .fa-solid {
     height: 250px;
     padding: 75px 90px;
     margin-left: 50px;
-    margin-bottom: 250px;
+    margin-bottom: 200px;
   }
   .heading1 {
-    text-align: center;
+    text-align: left;
   }
   .bar {
-    font-size: 23px;
+    font-size: 20px;
     margin-left: 20px;
+    margin-right: 20px;
   }
   .copyright {
     font-size: 14px;
